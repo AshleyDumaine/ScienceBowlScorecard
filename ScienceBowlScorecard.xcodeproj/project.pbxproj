@@ -14,6 +14,8 @@
 		17A2C4791AA3C3CA007AB464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A2C4781AA3C3CA007AB464 /* Images.xcassets */; };
 		17A2C47C1AA3C3CA007AB464 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A2C47A1AA3C3CA007AB464 /* LaunchScreen.xib */; };
 		17A2C4881AA3C3CA007AB464 /* ScienceBowlScorecardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2C4871AA3C3CA007AB464 /* ScienceBowlScorecardTests.m */; };
+		17E5162D1AA45272003D0833 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E5162C1AA45272003D0833 /* MessageUI.framework */; };
+		17E516301AA45A8B003D0833 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E5162F1AA45A8B003D0833 /* StartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		17A2C4811AA3C3CA007AB464 /* ScienceBowlScorecardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScienceBowlScorecardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A2C4861AA3C3CA007AB464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A2C4871AA3C3CA007AB464 /* ScienceBowlScorecardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScienceBowlScorecardTests.m; sourceTree = "<group>"; };
+		17E5162C1AA45272003D0833 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		17E5162E1AA45A8B003D0833 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		17E5162F1AA45A8B003D0833 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17E5162D1AA45272003D0833 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		17A2C45F1AA3C3CA007AB464 = {
 			isa = PBXGroup;
 			children = (
+				17E5162C1AA45272003D0833 /* MessageUI.framework */,
 				17A2C46A1AA3C3CA007AB464 /* ScienceBowlScorecard */,
 				17A2C4841AA3C3CA007AB464 /* ScienceBowlScorecardTests */,
 				17A2C4691AA3C3CA007AB464 /* Products */,
@@ -83,6 +90,8 @@
 			children = (
 				17A2C46F1AA3C3CA007AB464 /* AppDelegate.h */,
 				17A2C4701AA3C3CA007AB464 /* AppDelegate.m */,
+				17E5162E1AA45A8B003D0833 /* StartViewController.h */,
+				17E5162F1AA45A8B003D0833 /* StartViewController.m */,
 				17A2C4721AA3C3CA007AB464 /* ViewController.h */,
 				17A2C4731AA3C3CA007AB464 /* ViewController.m */,
 				17A2C4751AA3C3CA007AB464 /* Main.storyboard */,
@@ -168,6 +177,7 @@
 				TargetAttributes = {
 					17A2C4671AA3C3CA007AB464 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = J8E8R4729Q;
 					};
 					17A2C4801AA3C3CA007AB464 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -220,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A2C4741AA3C3CA007AB464 /* ViewController.m in Sources */,
+				17E516301AA45A8B003D0833 /* StartViewController.m in Sources */,
 				17A2C4711AA3C3CA007AB464 /* AppDelegate.m in Sources */,
 				17A2C46E1AA3C3CA007AB464 /* main.m in Sources */,
 			);
@@ -280,6 +291,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -343,9 +355,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScienceBowlScorecard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -353,9 +368,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = ScienceBowlScorecard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -412,6 +429,7 @@
 				17A2C48D1AA3C3CA007AB464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17A2C48E1AA3C3CA007AB464 /* Build configuration list for PBXNativeTarget "ScienceBowlScorecardTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +438,7 @@
 				17A2C4901AA3C3CA007AB464 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
