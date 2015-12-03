@@ -19,6 +19,7 @@
 @property (nonatomic) NSString* location;
 @property (nonatomic) NSString* scorekeeper;
 @property (nonatomic) NSString* division;
+@property (nonatomic) NSString* roundNum;
 -(IBAction)awardTossupA:(id)sender;
 -(IBAction)awardTossupB:(id)sender;
 -(IBAction)awardBonusA:(id)sender;

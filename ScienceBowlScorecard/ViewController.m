@@ -118,8 +118,9 @@
 -(IBAction)sendResults:(id)sender {
     if ([MFMailComposeViewController canSendMail]){
         NSString *emailTitle = @"Science Bowl Round Results";
-        NSString *messageBody = [NSString stringWithFormat:@"Here are the results for the following match:\n%@ versus %@\nDivision: %@\nLocation: %@\nScorekeeper: %@\n\nFinal Score\n%@: %d\n%@: %d", self.team_a, self.team_b, self.division, self.location, self.scorekeeper, self.team_a, [self.team_a_score.text intValue], self.team_b, [self.team_b_score.text intValue]];
+        NSString *messageBody = [NSString stringWithFormat:@"Here are the results for the following match:\n%@ versus %@\nDivision: %@\nLocation: %@\nModerator: %@\nRound Number: %@\n\nFinal Score\n%@: %d\n%@: %d", self.team_a, self.team_b, self.division, self.location, self.scorekeeper, self.roundNum, self.team_a, [self.team_a_score.text intValue], self.team_b, [self.team_b_score.text intValue]];
         MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+        NSLog(@"%@", messageBody);
         mc.mailComposeDelegate = self;
         [mc setSubject:emailTitle];
         [mc setMessageBody:messageBody isHTML:NO];

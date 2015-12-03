@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField* team_b;
 @property (weak, nonatomic) IBOutlet UITextField* location;
 @property (weak, nonatomic) IBOutlet UITextField* scorekeeper;
+@property (weak, nonatomic) IBOutlet UITextField* roundNum;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem* startButton;
 @property (weak, nonatomic) IBOutlet UINavigationBar* navBar;
 @property (weak, nonatomic) IBOutlet UISegmentedControl* division;

@@ -12,10 +12,10 @@
 		17A2C4741AA3C3CA007AB464 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2C4731AA3C3CA007AB464 /* ViewController.m */; };
 		17A2C4771AA3C3CA007AB464 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A2C4751AA3C3CA007AB464 /* Main.storyboard */; };
 		17A2C4791AA3C3CA007AB464 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A2C4781AA3C3CA007AB464 /* Images.xcassets */; };
-		17A2C47C1AA3C3CA007AB464 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A2C47A1AA3C3CA007AB464 /* LaunchScreen.xib */; };
 		17A2C4881AA3C3CA007AB464 /* ScienceBowlScorecardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2C4871AA3C3CA007AB464 /* ScienceBowlScorecardTests.m */; };
 		17E5162D1AA45272003D0833 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E5162C1AA45272003D0833 /* MessageUI.framework */; };
 		17E516301AA45A8B003D0833 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E5162F1AA45A8B003D0833 /* StartViewController.m */; };
+		17FC19D71AA6B6B5008E9E07 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FC19D61AA6B6B5008E9E07 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,13 +38,13 @@
 		17A2C4731AA3C3CA007AB464 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		17A2C4761AA3C3CA007AB464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		17A2C4781AA3C3CA007AB464 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		17A2C47B1AA3C3CA007AB464 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		17A2C4811AA3C3CA007AB464 /* ScienceBowlScorecardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScienceBowlScorecardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A2C4861AA3C3CA007AB464 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A2C4871AA3C3CA007AB464 /* ScienceBowlScorecardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScienceBowlScorecardTests.m; sourceTree = "<group>"; };
 		17E5162C1AA45272003D0833 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		17E5162E1AA45A8B003D0833 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		17E5162F1AA45A8B003D0833 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		17FC19D61AA6B6B5008E9E07 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 				17A2C4721AA3C3CA007AB464 /* ViewController.h */,
 				17A2C4731AA3C3CA007AB464 /* ViewController.m */,
 				17A2C4751AA3C3CA007AB464 /* Main.storyboard */,
+				17FC19D61AA6B6B5008E9E07 /* Launch Screen.xib */,
 				17A2C4781AA3C3CA007AB464 /* Images.xcassets */,
-				17A2C47A1AA3C3CA007AB464 /* LaunchScreen.xib */,
 				17A2C46B1AA3C3CA007AB464 /* Supporting Files */,
 			);
 			path = ScienceBowlScorecard;
@@ -210,7 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A2C4771AA3C3CA007AB464 /* Main.storyboard in Resources */,
-				17A2C47C1AA3C3CA007AB464 /* LaunchScreen.xib in Resources */,
+				17FC19D71AA6B6B5008E9E07 /* Launch Screen.xib in Resources */,
 				17A2C4791AA3C3CA007AB464 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,14 +261,6 @@
 				17A2C4761AA3C3CA007AB464 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		17A2C47A1AA3C3CA007AB464 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				17A2C47B1AA3C3CA007AB464 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -357,9 +349,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScienceBowlScorecard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -369,9 +363,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ScienceBowlScorecard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

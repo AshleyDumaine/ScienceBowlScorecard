@@ -24,6 +24,7 @@
 @synthesize startButton;
 @synthesize navBar;
 @synthesize division;
+@synthesize roundNum;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,36 +41,38 @@
 }
 
 -(void) textFieldDidBeginEditing: (UITextField *) textField {
-    [self.scrollView setContentOffset:CGPointMake(0,textField.center.y-90) animated:YES];
+    //[self.scrollView setContentOffset:CGPointMake(0,textField.center.y-90) animated:YES];
 }
 
 //LEAKS OCCURRING HERE
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField == self.location || fieldCount >= 4) {
+    if (textField == self.roundNum || fieldCount >= 5) {
         [textField resignFirstResponder];
         fieldCount++;
         [self.scrollView setContentOffset:CGPointMake(0,0) animated:YES];
     }
+    else if (textField == self.location) {
+        [self.roundNum becomeFirstResponder];
+        fieldCount++;
+        [self.scrollView setContentOffset:CGPointMake(0,self.roundNum.center.y-90) animated:YES];
+    }
     else if (textField == self.scorekeeper) {
         [self.location becomeFirstResponder];
         fieldCount++;
-        //[self.scrollView setContentOffset:CGPointMake(0,270) animated:YES];
         [self.scrollView setContentOffset:CGPointMake(0,self.location.center.y-90) animated:YES];
     }
     else if (textField == self.team_b) {
         [self.scorekeeper becomeFirstResponder];
         fieldCount++;
-        //[self.scrollView setContentOffset:CGPointMake(0,180) animated:YES];
         [self.scrollView setContentOffset:CGPointMake(0,self.scorekeeper.center.y-90) animated:YES];
-
+        
     }
     else if (textField == self.team_a) {
         [self.team_b becomeFirstResponder];
         fieldCount++;
-        //[self.scrollView setContentOffset:CGPointMake(0,90) animated:YES];
         [self.scrollView setContentOffset:CGPointMake(0,self.team_b.center.y-90) animated:YES];
     }
-    if (fieldCount == 4) { //enabled as soon as it hits 4, doesn't matter if it is greater for edits
+    if (fieldCount == 5) { //enabled as soon as it hits 4, doesn't matter if it is greater for edits
         self.startButton.enabled = YES;
     }
     return YES;
@@ -87,6 +90,7 @@
     controller.team_b = self.team_b.text;
     controller.location = self.location.text;
     controller.scorekeeper = self.scorekeeper.text;
+    controller.roundNum = self.roundNum.text;
     controller.division = [self.division titleForSegmentAtIndex:self.division.selectedSegmentIndex];
 }
 
