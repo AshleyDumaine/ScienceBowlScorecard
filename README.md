@@ -16,7 +16,7 @@ Often, people need to perform multiple roles, so this will help to alleviate the
 projector, which is provided in each classroom, allows for an easy-to-read representation of the current round score to be projected 
 instead of showing an entire spreadsheet of the scores or keeping tally marks on the board.
 
-Overall, the ScienceBowlScoreCard app aims to make the Northeast Science Bowl run more effectively by eliminating the need for 
+Overall, the ScienceBowlScorecard app aims to make the Northeast Science Bowl run more effectively by eliminating the need for 
 paper scorekeeping and manual delivery.
 
 ## Further Work
