@@ -24,3 +24,7 @@ Although this app now works universally on iOS (iPhone 4S+, iPad 2+), it is unde
 device. An Android version should also be available for installation onto Android devices. Another option is to make this into a web 
 app since computers are already needed to communicate with Science Bowl Central through a chat room in order to recieve updates on start 
 and release times for rounds.
+
+## Screenshots
+![](https://raw.github.com/AshleyDumaine/ScienceBowlScorecard/master/initial_view_controller.png)
+![](https://raw.github.com/AshleyDumaine/ScienceBowlScorecard/master/score_view_controller.png)
