@@ -40,39 +40,29 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void) textFieldDidBeginEditing: (UITextField *) textField {
-    //[self.scrollView setContentOffset:CGPointMake(0,textField.center.y-90) animated:YES];
-}
-
-//LEAKS OCCURRING HERE
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.roundNum || fieldCount >= 5) {
         [textField resignFirstResponder];
-        fieldCount++;
         [self.scrollView setContentOffset:CGPointMake(0,0) animated:YES];
     }
     else if (textField == self.location) {
         [self.roundNum becomeFirstResponder];
-        fieldCount++;
         [self.scrollView setContentOffset:CGPointMake(0,self.roundNum.center.y-90) animated:YES];
     }
     else if (textField == self.scorekeeper) {
         [self.location becomeFirstResponder];
-        fieldCount++;
         [self.scrollView setContentOffset:CGPointMake(0,self.location.center.y-90) animated:YES];
     }
     else if (textField == self.team_b) {
         [self.scorekeeper becomeFirstResponder];
-        fieldCount++;
         [self.scrollView setContentOffset:CGPointMake(0,self.scorekeeper.center.y-90) animated:YES];
         
     }
     else if (textField == self.team_a) {
         [self.team_b becomeFirstResponder];
-        fieldCount++;
         [self.scrollView setContentOffset:CGPointMake(0,self.team_b.center.y-90) animated:YES];
     }
-    if (fieldCount == 5) { //enabled as soon as it hits 4, doesn't matter if it is greater for edits
+    if ([self.team_b hasText] && [self.team_a hasText] && [self.scorekeeper hasText] && [self.location hasText] && [self.roundNum hasText]) {
         self.startButton.enabled = YES;
     }
     return YES;
@@ -81,7 +71,6 @@
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
