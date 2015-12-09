@@ -142,4 +142,18 @@
     }
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
+
+-(IBAction)startNewRound:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Start New Round?"
+                                                    message:@""
+                                                   delegate:self
+                                          cancelButtonTitle:@"Cancel"
+                                          otherButtonTitles:@"Yes", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) [self performSegueWithIdentifier:@"StartNewRound" sender:self];
+}
 @end

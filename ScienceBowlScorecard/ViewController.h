@@ -9,9 +9,9 @@
 #import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate> {
-    
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate, UIAlertViewDelegate> {
 }
+
 @property (weak, nonatomic) IBOutlet UILabel* team_a_score;
 @property (weak, nonatomic) IBOutlet UILabel* team_b_score;
 @property (nonatomic) NSString* team_a;
@@ -32,4 +32,5 @@
 -(IBAction)redo:(id)sender;
 -(IBAction)undo:(id)sender;
 -(IBAction)sendResults:(id)sender;
+-(IBAction)startNewRound:(id)sender;
 @end

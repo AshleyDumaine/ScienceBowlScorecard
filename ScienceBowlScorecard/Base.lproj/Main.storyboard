@@ -423,7 +423,7 @@
                                             <barButtonItem title="Reset" id="TqI-U5-3VW">
                                                 <color key="tintColor" red="1" green="0.0" blue="0.01085100634" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
-                                                    <segue destination="smf-y8-RC6" kind="presentation" id="2lg-s7-Hw4"/>
+                                                    <action selector="startNewRound:" destination="QiR-cX-wM7" id="SP9-ll-bQZ"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="DOe-m2-uc3"/>
@@ -515,11 +515,12 @@
                     <connections>
                         <outlet property="team_a_score" destination="Yjz-yb-3Ps" id="87w-HP-hom"/>
                         <outlet property="team_b_score" destination="7hw-r2-gcV" id="h6f-67-CI0"/>
+                        <segue destination="smf-y8-RC6" kind="presentation" identifier="StartNewRound" id="wKY-lW-iP3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NHB-X2-83S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="314"/>
+            <point key="canvasLocation" x="-563" y="314"/>
         </scene>
     </scenes>
     <resources>
