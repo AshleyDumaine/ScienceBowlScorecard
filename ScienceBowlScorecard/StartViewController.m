@@ -17,13 +17,14 @@
 
 @implementation StartViewController
 
-@synthesize team_a;
-@synthesize team_b;
+@synthesize teamA;
+@synthesize teamB;
 @synthesize location;
 @synthesize scorekeeper;
 @synthesize startButton;
 @synthesize navBar;
 @synthesize division;
+@synthesize roundType;
 @synthesize roundNum;
 
 - (void)viewDidLoad {
@@ -32,6 +33,7 @@
                                     [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:21],
                                     NSFontAttributeName, nil]];
     fieldCount = 0;
+    self.roundType.apportionsSegmentWidthsByContent = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -53,21 +55,25 @@
         [self.location becomeFirstResponder];
         [self.scrollView setContentOffset:CGPointMake(0,self.location.center.y-90) animated:YES];
     }
-    else if (textField == self.team_b) {
+    else if (textField == self.teamB) {
         [self.scorekeeper becomeFirstResponder];
         [self.scrollView setContentOffset:CGPointMake(0,self.scorekeeper.center.y-90) animated:YES];
         
     }
-    else if (textField == self.team_a) {
-        [self.team_b becomeFirstResponder];
-        [self.scrollView setContentOffset:CGPointMake(0,self.team_b.center.y-90) animated:YES];
+    else if (textField == self.teamA) {
+        [self.teamB becomeFirstResponder];
+        [self.scrollView setContentOffset:CGPointMake(0,self.teamB.center.y-90) animated:YES];
     }
-    if ([self.team_b hasText] && [self.team_a hasText] && [self.scorekeeper hasText] && [self.location hasText] && [self.roundNum hasText]) {
+    if ([self.teamB hasText] && [self.teamA hasText] && [self.scorekeeper hasText] && [self.location hasText] && [self.roundNum hasText]) {
         self.startButton.enabled = YES;
     }
     return YES;
 }
 
+- (IBAction)checkRoundType:(UISegmentedControl *)roundTypeSelector {
+    NSString *selection = [roundTypeSelector titleForSegmentAtIndex:roundTypeSelector.selectedSegmentIndex];
+    self.division.enabled = [selection isEqualToString:@"Wildcard"] || [selection isEqualToString:@"Civil War"] || [self.roundNum.text.capitalizedString containsString:@"Final"] ? NO : YES;
+}
 
 #pragma mark - Navigation
 
@@ -75,12 +81,13 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     ViewController *controller = [segue destinationViewController];
-    controller.team_a = self.team_a.text;
-    controller.team_b = self.team_b.text;
+    controller.teamA = self.teamA.text;
+    controller.teamB = self.teamB.text;
     controller.location = self.location.text;
     controller.scorekeeper = self.scorekeeper.text;
     controller.roundNum = self.roundNum.text;
-    controller.division = [self.division titleForSegmentAtIndex:self.division.selectedSegmentIndex];
+    controller.roundType = [self.roundType titleForSegmentAtIndex:self.roundType.selectedSegmentIndex];
+    controller.division = self.division.enabled ? [self.division titleForSegmentAtIndex:self.division.selectedSegmentIndex] : @"N/A";
 }
 
 

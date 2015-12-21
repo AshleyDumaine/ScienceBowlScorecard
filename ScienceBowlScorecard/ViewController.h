@@ -14,12 +14,13 @@
 
 @property (weak, nonatomic) IBOutlet UILabel* team_a_score;
 @property (weak, nonatomic) IBOutlet UILabel* team_b_score;
-@property (nonatomic) NSString* team_a;
-@property (nonatomic) NSString* team_b;
+@property (nonatomic) NSString* teamA;
+@property (nonatomic) NSString* teamB;
 @property (nonatomic) NSString* location;
 @property (nonatomic) NSString* scorekeeper;
 @property (nonatomic) NSString* division;
 @property (nonatomic) NSString* roundNum;
+@property (nonatomic) NSString* roundType;
 -(IBAction)awardTossupA:(id)sender;
 -(IBAction)awardTossupB:(id)sender;
 -(IBAction)awardBonusA:(id)sender;
