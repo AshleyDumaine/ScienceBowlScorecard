@@ -15,6 +15,7 @@
 		17A2C4881AA3C3CA007AB464 /* ScienceBowlScorecardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A2C4871AA3C3CA007AB464 /* ScienceBowlScorecardTests.m */; };
 		17E5162D1AA45272003D0833 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17E5162C1AA45272003D0833 /* MessageUI.framework */; };
 		17E516301AA45A8B003D0833 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17E5162F1AA45A8B003D0833 /* StartViewController.m */; };
+		17FBB3C51C2842FA003FE2D5 /* roster.txt in Resources */ = {isa = PBXBuildFile; fileRef = 17FBB3C41C2842FA003FE2D5 /* roster.txt */; };
 		17FC19D71AA6B6B5008E9E07 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17FC19D61AA6B6B5008E9E07 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		17E5162C1AA45272003D0833 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		17E5162E1AA45A8B003D0833 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		17E5162F1AA45A8B003D0833 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		17FBB3C41C2842FA003FE2D5 /* roster.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = roster.txt; sourceTree = "<group>"; };
 		17FC19D61AA6B6B5008E9E07 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 		17A2C46B1AA3C3CA007AB464 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17FBB3C41C2842FA003FE2D5 /* roster.txt */,
 				17A2C46C1AA3C3CA007AB464 /* Info.plist */,
 				17A2C46D1AA3C3CA007AB464 /* main.m */,
 			);
@@ -212,6 +215,7 @@
 				17A2C4771AA3C3CA007AB464 /* Main.storyboard in Resources */,
 				17FC19D71AA6B6B5008E9E07 /* Launch Screen.xib in Resources */,
 				17A2C4791AA3C3CA007AB464 /* Images.xcassets in Resources */,
+				17FBB3C51C2842FA003FE2D5 /* roster.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

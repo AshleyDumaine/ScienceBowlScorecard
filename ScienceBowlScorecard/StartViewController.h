@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartViewController : UIViewController <UITextFieldDelegate> {
+@interface StartViewController : UIViewController <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate> {
     
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UITextField* teamA;
-@property (weak, nonatomic) IBOutlet UITextField* teamB;
+@property (weak, nonatomic) IBOutlet UIPickerView* teamA;
+@property (weak, nonatomic) IBOutlet UIPickerView* teamB;
 @property (weak, nonatomic) IBOutlet UITextField* location;
 @property (weak, nonatomic) IBOutlet UITextField* scorekeeper;
 @property (weak, nonatomic) IBOutlet UITextField* roundNum;

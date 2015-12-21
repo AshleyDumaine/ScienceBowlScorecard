@@ -10,7 +10,7 @@
 #import "ViewController.h"
 
 @interface StartViewController () {
-    int fieldCount;
+    NSMutableArray *teams;
 }
 
 @end
@@ -32,9 +32,10 @@
     [navBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
                                     [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:21],
                                     NSFontAttributeName, nil]];
-    fieldCount = 0;
     self.roundType.apportionsSegmentWidthsByContent = YES;
-    // Do any additional setup after loading the view.
+
+    NSString *rosterTeams = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"roster" ofType:@"txt"] encoding:NSMacOSRomanStringEncoding error:nil];
+    teams = [[NSMutableArray alloc]initWithArray:[rosterTeams componentsSeparatedByString:@"\n"]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +44,7 @@
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    if (textField == self.roundNum || fieldCount >= 5) {
+    if (textField == self.roundNum) {
         [textField resignFirstResponder];
         [self.scrollView setContentOffset:CGPointMake(0,0) animated:YES];
     }
@@ -55,16 +56,7 @@
         [self.location becomeFirstResponder];
         [self.scrollView setContentOffset:CGPointMake(0,self.location.center.y-90) animated:YES];
     }
-    else if (textField == self.teamB) {
-        [self.scorekeeper becomeFirstResponder];
-        [self.scrollView setContentOffset:CGPointMake(0,self.scorekeeper.center.y-90) animated:YES];
-        
-    }
-    else if (textField == self.teamA) {
-        [self.teamB becomeFirstResponder];
-        [self.scrollView setContentOffset:CGPointMake(0,self.teamB.center.y-90) animated:YES];
-    }
-    if ([self.teamB hasText] && [self.teamA hasText] && [self.scorekeeper hasText] && [self.location hasText] && [self.roundNum hasText]) {
+    if ([self.scorekeeper hasText] && [self.location hasText] && [self.roundNum hasText]) {
         self.startButton.enabled = YES;
     }
     return YES;
@@ -75,14 +67,36 @@
     self.division.enabled = [selection isEqualToString:@"Wildcard"] || [selection isEqualToString:@"Civil War"] || [self.roundNum.text.capitalizedString containsString:@"Final"] ? NO : YES;
 }
 
+# pragma mark - Picker View Data Source
+- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent: (NSInteger)component {
+    return [teams count];
+}
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
+    UILabel* tView = (UILabel*)view;
+    if (!tView) {
+        tView = [[UILabel alloc] init];
+        [tView setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:18]];
+        tView.textColor = [UIColor whiteColor];
+        tView.numberOfLines = 2;
+    }
+    tView.text = [teams objectAtIndex:row];
+    tView.textAlignment = NSTextAlignmentCenter;
+    return tView;
+}
+
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     ViewController *controller = [segue destinationViewController];
-    controller.teamA = self.teamA.text;
-    controller.teamB = self.teamB.text;
+    controller.teamA = [teams objectAtIndex:[self.teamA selectedRowInComponent:0]];
+    controller.teamB = [teams objectAtIndex:[self.teamB selectedRowInComponent:0]];
     controller.location = self.location.text;
     controller.scorekeeper = self.scorekeeper.text;
     controller.roundNum = self.roundNum.text;
