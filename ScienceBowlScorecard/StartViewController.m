@@ -43,6 +43,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction) debugRoundTypeSelector: (UISegmentedControl *) roundTypeSelector {
+    NSString *selection = [roundTypeSelector titleForSegmentAtIndex:roundTypeSelector.selectedSegmentIndex];
+    NSLog(@"%@", selection);
+}
+
+- (IBAction) debugDevisionSelector: (UISegmentedControl *) devisionSelector {
+    NSString *selection = [devisionSelector titleForSegmentAtIndex:devisionSelector.selectedSegmentIndex];
+    NSLog(@"%@", selection);
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     if (textField == self.roundNum) {
         [textField resignFirstResponder];

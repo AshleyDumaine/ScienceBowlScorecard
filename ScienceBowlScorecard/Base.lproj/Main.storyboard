@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1134" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smf-y8-RC6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="smf-y8-RC6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -15,11 +16,11 @@
                         <viewControllerLayoutGuide type="bottom" id="D6p-u0-HHM"/>
                     </layoutGuides>
                     <view key="view" contentMode="center" id="q9k-fJ-lCy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lifescience" translatesAutoresizingMaskIntoConstraints="NO" id="FNP-ea-KQj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="200" width="600" height="600"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="600" id="H6E-w3-gFe"/>
                                 </constraints>
@@ -39,8 +40,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-XQ-xJS">
-                                <rect key="frame" x="0.0" y="64" width="600" height="539"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-XQ-xJS">
+                                <rect key="frame" x="0.0" y="52" width="600" height="739"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTJ-pI-AVq">
                                         <rect key="frame" x="20" y="285" width="560" height="21"/>
@@ -68,19 +69,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c9s-iW-sHD">
-                                        <rect key="frame" x="20" y="468" width="560" height="29"/>
-                                        <segments>
-                                            <segment title="Morning"/>
-                                            <segment title="Championship"/>
-                                            <segment title="Wildcard"/>
-                                            <segment title="Civil War"/>
-                                        </segments>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <action selector="checkRoundType:" destination="smf-y8-RC6" eventType="valueChanged" id="2Sy-Ms-7I9"/>
-                                        </connections>
-                                    </segmentedControl>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Hvh-aT-aqS">
                                         <rect key="frame" x="92" y="394" width="419" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -95,17 +83,6 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bQW-Z2-1EK">
-                                        <rect key="frame" x="150" y="545" width="300" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="fGm-lv-UQr"/>
-                                        </constraints>
-                                        <segments>
-                                            <segment title="North"/>
-                                            <segment title="South"/>
-                                        </segments>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Division" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnm-oI-F3U">
                                         <rect key="frame" x="20" y="517" width="560" height="24"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="20"/>
@@ -180,6 +157,30 @@
                                             <outlet property="delegate" destination="smf-y8-RC6" id="2n5-Ok-stR"/>
                                         </connections>
                                     </textField>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="c9s-iW-sHD">
+                                        <rect key="frame" x="20" y="468" width="560" height="29"/>
+                                        <segments>
+                                            <segment title="Morning"/>
+                                            <segment title="Championship"/>
+                                            <segment title="Wildcard"/>
+                                            <segment title="Civil War"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="checkRoundType:" destination="smf-y8-RC6" eventType="valueChanged" id="2Sy-Ms-7I9"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ng0-m6-4Tm">
+                                        <rect key="frame" x="151" y="549" width="300" height="29"/>
+                                        <segments>
+                                            <segment title="North"/>
+                                            <segment title="South"/>
+                                        </segments>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="debugDevisionSelector:" destination="smf-y8-RC6" eventType="touchUpInside" id="zBM-oL-NIH"/>
+                                        </connections>
+                                    </segmentedControl>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Hvh-aT-aqS" firstAttribute="trailing" secondItem="GUT-0D-oJy" secondAttribute="trailing" constant="-69" id="0hd-ua-tMp"/>
@@ -195,22 +196,21 @@
                                     <constraint firstItem="Hvh-aT-aqS" firstAttribute="leading" secondItem="1Az-XQ-xJS" secondAttribute="leading" constant="92" id="LDQ-SD-fKn"/>
                                     <constraint firstItem="fOB-b4-2LP" firstAttribute="trailing" secondItem="fTJ-pI-AVq" secondAttribute="trailing" id="PCE-YC-md4"/>
                                     <constraint firstItem="GUT-0D-oJy" firstAttribute="leading" secondItem="1Az-XQ-xJS" secondAttribute="leading" constant="20" id="Pcu-BA-YC4"/>
+                                    <constraint firstItem="ng0-m6-4Tm" firstAttribute="top" secondItem="Wnm-oI-F3U" secondAttribute="bottom" constant="8" id="Q4b-mF-zfq"/>
                                     <constraint firstItem="c9s-iW-sHD" firstAttribute="top" secondItem="fOB-b4-2LP" secondAttribute="bottom" constant="3" id="Smb-Fy-ukf"/>
                                     <constraint firstItem="BM7-8i-7uk" firstAttribute="leading" secondItem="1Az-XQ-xJS" secondAttribute="leading" constant="91" id="Tkd-iD-VAu"/>
                                     <constraint firstItem="BM7-8i-7uk" firstAttribute="top" secondItem="fTJ-pI-AVq" secondAttribute="bottom" constant="8" id="Vd5-zn-HvX"/>
                                     <constraint firstItem="c9s-iW-sHD" firstAttribute="centerX" secondItem="fOB-b4-2LP" secondAttribute="centerX" id="bTv-oQ-45K"/>
                                     <constraint firstItem="BM7-8i-7uk" firstAttribute="trailing" secondItem="GUT-0D-oJy" secondAttribute="trailing" constant="-70" id="dKX-aE-A9j"/>
-                                    <constraint firstItem="bQW-Z2-1EK" firstAttribute="centerX" secondItem="Wnm-oI-F3U" secondAttribute="centerX" id="dlB-XR-Piw"/>
                                     <constraint firstAttribute="trailing" secondItem="1Jf-eE-f9k" secondAttribute="trailing" constant="71" id="eQL-sC-i0r"/>
                                     <constraint firstAttribute="centerX" secondItem="1Jf-eE-f9k" secondAttribute="centerX" constant="-1.5" id="eQj-Oa-nAH"/>
                                     <constraint firstItem="OEn-k6-JkX" firstAttribute="leading" secondItem="1Az-XQ-xJS" secondAttribute="leading" constant="20" id="gYB-E5-S4h"/>
                                     <constraint firstAttribute="centerY" secondItem="1Jf-eE-f9k" secondAttribute="centerY" constant="161.5" id="jGu-jq-Dw8"/>
                                     <constraint firstItem="c9s-iW-sHD" firstAttribute="leading" secondItem="1Az-XQ-xJS" secondAttribute="leading" constant="20" id="jHd-EP-U1w"/>
-                                    <constraint firstAttribute="centerX" secondItem="bQW-Z2-1EK" secondAttribute="centerX" id="mEO-Pt-ECY"/>
                                     <constraint firstAttribute="centerX" secondItem="Wnm-oI-F3U" secondAttribute="centerX" id="ohJ-HZ-yPq"/>
+                                    <constraint firstItem="ng0-m6-4Tm" firstAttribute="centerX" secondItem="1Az-XQ-xJS" secondAttribute="centerX" id="r7b-C3-Dxo"/>
                                     <constraint firstItem="fTJ-pI-AVq" firstAttribute="top" secondItem="WQO-No-c5U" secondAttribute="bottom" constant="20" id="rNz-uX-oAA"/>
                                     <constraint firstItem="WQO-No-c5U" firstAttribute="leading" secondItem="1Az-XQ-xJS" secondAttribute="leading" constant="92" id="rjn-fP-Gw7"/>
-                                    <constraint firstItem="bQW-Z2-1EK" firstAttribute="top" secondItem="Wnm-oI-F3U" secondAttribute="bottom" constant="4" id="rn0-h9-LYU"/>
                                     <constraint firstItem="fTJ-pI-AVq" firstAttribute="centerX" secondItem="BM7-8i-7uk" secondAttribute="centerX" id="uXx-Jc-pZh"/>
                                     <constraint firstItem="WQO-No-c5U" firstAttribute="top" secondItem="OEn-k6-JkX" secondAttribute="bottom" constant="8" id="ux3-bN-RdW"/>
                                     <constraint firstItem="Hvh-aT-aqS" firstAttribute="top" secondItem="GUT-0D-oJy" secondAttribute="bottom" constant="8" id="v5g-SA-JDA"/>
@@ -236,8 +236,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="EZA-LX-FUX"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                     <connections>
-                        <outlet property="division" destination="bQW-Z2-1EK" id="nNy-A1-cDB"/>
+                        <outlet property="division" destination="ng0-m6-4Tm" id="lFD-Qa-Cyo"/>
                         <outlet property="location" destination="BM7-8i-7uk" id="ihU-og-1Ye"/>
                         <outlet property="navBar" destination="hkb-FH-lDA" id="1uq-tc-tNO"/>
                         <outlet property="roundNum" destination="Hvh-aT-aqS" id="7aT-Nd-vbM"/>
