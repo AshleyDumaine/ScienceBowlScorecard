@@ -4,7 +4,10 @@ Bedford A
 Bedford B
 Braintree A
 Braintree B
+Cheshire A
+Cheshire B
 Churchville
+Conard
 Cranston A
 Cranston B
 Deerfield A
@@ -14,10 +17,16 @@ Douglas
 E.O. Smith A
 E.O. Smith B
 E.O. Smith C
+Fairchild Wheeler
 Fairfield Warde A
 Fairfield Warde B
 Farmington A
+Farmington B
+Glastonbury A
+Glastonbury B
 Greenwich A
+Greenwich B
+Hamden
 Joel Barlow A
 Joel Barlow B
 KIPP
@@ -26,6 +35,7 @@ Lexington B
 Lexington C
 Lincoln-Sudbury A
 Lincoln-Sudbury B
+Loomis Chaffee
 Lyme Old Lyme A
 Lyme Old Lyme B
 Miss Hall's A
@@ -38,8 +48,12 @@ New Britain A
 New Britain B
 Newton North A
 Newton North B
+Newtown A
+Newtown B
 Philips Exeter A
 Philips Exeter B
+Pomperaug A
+Pomperaug B
 Roxbury
 Sharon A
 Sharon B
@@ -51,3 +65,7 @@ University A
 University B
 Waterford
 Westhill
+Wheeler A
+Wheeler B
+Woodstock A
+Woodstock B
